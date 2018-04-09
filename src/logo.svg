@@ -1,0 +1,24 @@
+  <svg viewBox="0 0 400 100" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <font-face>
+      <font-face-src>
+        <font-face-uri href="file://FiraCode-Bold.ttf"/>
+      </font-face-src>
+    </font-face>
+  </defs>
+    
+    <text font-family="Fira Code" stroke-dasharray="700 700" stroke-dashoffset="700" fill="#aaa" stroke="#000" dy="1em" font-size="70">
+      KOCHIE'S
+      <animate dur="5s" repeatCount="indefinite"
+        attributeName="stroke-dashoffset"
+        values="700;0" />
+    </text>
+    
+    <text font-family="Fira Code" stroke-dasharray="200 700" stroke-dashoffset="700" fill="#aaa" stroke="#000" dy="7em" dx="5em" font-size="14">
+      WEB DEVELOPMENT
+      <animate dur="5s" repeatCount="indefinite"
+        attributeName="stroke-dashoffset"
+        values="700;0" />
+    </text>
+    
+  </svg>
