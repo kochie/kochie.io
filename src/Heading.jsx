@@ -14,7 +14,7 @@ const styles = {
 
 const Heading = ({ classes }) => (
   <div className={classes.root}>
-    <AppBar position="sticky" color="default">
+    <AppBar position="fixed" color="default">
       <Toolbar>
         <Typography variant="title" color="inherit">
             Title
