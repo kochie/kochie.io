@@ -16,6 +16,12 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
+"@material-ui/icons@^1.0.0-beta.42":
+  version "1.0.0-beta.42"
+  resolved "https://registry.yarnpkg.com/@material-ui/icons/-/icons-1.0.0-beta.42.tgz#1e0e45e8f4de533071c7e4532508fa79bf1f29d9"
+  dependencies:
+    recompose "^0.26.0"
+
 "@sindresorhus/is@^0.7.0":
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
@@ -5644,7 +5650,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.8, prop-types@^15.6.0:
+prop-types@^15.5.8, prop-types@^15.6.0, prop-types@^15.6.1:
   version "15.6.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.1.tgz#36644453564255ddda391191fb3a125cbdf654ca"
   dependencies:

@@ -5,8 +5,10 @@
   "author": "Robert Koch <robert@kochie.io>",
   "license": "MIT",
   "dependencies": {
+    "@material-ui/icons": "^1.0.0-beta.42",
     "file-loader": "^1.1.11",
     "material-ui": "^1.0.0-beta.41",
+    "prop-types": "^15.6.1",
     "react": "^16.3.1",
     "react-dom": "^16.3.1",
     "react-particles-js": "^2.1.2"
