@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
+import CssBaseline from 'material-ui/CssBaseline';
 
 import Title from './Title';
 import Heading from './Heading';
@@ -9,6 +10,7 @@ import Portfolio from './Portfolio';
 
 const App = ({ classes }) => (
   <div>
+    <CssBaseline />
     <Heading />
     <Title />
     <TextSection />

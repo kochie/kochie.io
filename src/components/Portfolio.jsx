@@ -1,8 +1,5 @@
 import React from 'react';
 import { withStyles } from 'material-ui/styles';
-import GridList, { GridListTile, GridListTileBar } from 'material-ui/GridList';
-import IconButton from 'material-ui/IconButton';
-import StarBorderIcon from '@material-ui/icons/StarBorder';
 import PropTypes from 'prop-types';
 
 import Halo from '../assets/images/Halo.jpg';
@@ -42,20 +39,9 @@ const tileData = [
 const Portfolio = ({ classes }) => (
   <div className={classes.root}>
     {tileData.map(tile => (
-      <GridListTile key={tile.key} cols={tile.featured ? 2 : 1} rows={tile.featured ? 2 : 1}>
-        <img src={tile.img} alt={tile.title} />
-        <GridListTileBar
-            title={tile.title}
-            titlePosition="top"
-            actionIcon={
-              <IconButton className={classes.icon}>
-                <StarBorderIcon />
-              </IconButton>
-              }
-            actionPosition="left"
-            className={classes.titleBar}
-          />
-      </GridListTile>
+      <div className={[classes.gridItem, tile.featured ? classes.featured : ''].join(' ')} key={tile.key}>
+        <img src={tile.img} alt={tile.title} className={classes.img} />
+      </div>
         ))}
   </div>
 );
@@ -63,11 +49,23 @@ const Portfolio = ({ classes }) => (
 const styles = theme => ({
   root: {
     display: 'grid',
-    gridTemplateColumns: '1fr 1fr 1fr',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    overflow: 'hidden',
+    gridTemplateColumns: 'repeat(5, 1fr)',
+    gridTemplateRows: 'repeat(3, 1fr)',
+    // justifyContent: 'space-around',
+    alignSelf: 'stretch',
+    gridGap: 0,
     backgroundColor: theme.palette.background.paper,
+  },
+  gridItem: {
+    overflow: 'hidden',
+    width: '100%',
+    justifyContent: 'center',
+    alignContent: 'center',
+  },
+  img: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
   },
   gridList: {
     // width: 500,
@@ -82,6 +80,10 @@ const styles = theme => ({
   },
   icon: {
     color: 'white',
+  },
+  featured: {
+    gridColumn: '2 / 4',
+    gridRow: '1 / 3',
   },
 });
 
