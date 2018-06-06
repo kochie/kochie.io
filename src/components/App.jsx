@@ -1,28 +1,33 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { withStyles } from 'material-ui/styles';
 import CssBaseline from 'material-ui/CssBaseline';
+import PropTypes from 'prop-types';
 
 import Title from './Title';
 import Heading from './Heading';
 import TextSection from './TextSection';
 import Portfolio from './Portfolio';
+import Countries from './Countries';
+import Contact from './Contact';
+import Footer from './Footer';
 
-const App = ({ classes }) => (
+const App = ({ config }) => (
   <div>
     <CssBaseline />
-    <Heading />
+    <Heading title={config.title} />
     <Title />
     <TextSection />
-    <Portfolio />
+    <Portfolio tileData={config.Portfolio} />
+    <TextSection />
+    <Countries countries={config.Countries} />
+    <TextSection />
+    <Contact emailAddress="robert@kochie.io" />
+    <Footer />
   </div>
 );
 
 App.propTypes = {
-  classes: PropTypes.objectOf(PropTypes.object).isRequired,
+  config: PropTypes.objectOf(PropTypes.object).isRequired,
 };
 
-const styles = {};
 
-
-export default withStyles(styles, { withTheme: true })(App);
+export default App;

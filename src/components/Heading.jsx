@@ -12,12 +12,12 @@ const styles = {
   },
 };
 
-const Heading = ({ classes }) => (
+const Heading = ({ classes, title }) => (
   <div className={classes.root}>
     <AppBar position="fixed" color="default">
       <Toolbar>
         <Typography variant="title" color="inherit">
-            Title
+          {title}
         </Typography>
       </Toolbar>
     </AppBar>
@@ -25,7 +25,8 @@ const Heading = ({ classes }) => (
 );
 
 Heading.propTypes = {
-  classes: PropTypes.object.isRequired,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default withStyles(styles, { withTheme: true })(Heading);

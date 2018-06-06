@@ -5,7 +5,7 @@ import Typography from 'material-ui/Typography';
 import Paper from 'material-ui/Paper';
 import PropTypes from 'prop-types';
 
-import Earth from '../earth.jpg';
+import images from '../images';
 
 const Title = ({ classes, particleParams }) => (
   <div className={classes.container}>
@@ -59,7 +59,7 @@ Title.defaultProps = {
 };
 
 Title.propTypes = {
-  classes: PropTypes.objectOf(PropTypes.object).isRequired,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
   particleParams: PropTypes.objectOf(PropTypes.object),
 };
 
@@ -70,7 +70,7 @@ const styles = {
     left: 0,
     height: '100vh',
     backgroundColor: '#37364a',
-    backgroundImage: `url(${Earth})`,
+    backgroundImage: `url(${images.earth})`,
     backgroundPosition: '50% 50%',
     backgroundSize: 'cover',
     width: '100%',

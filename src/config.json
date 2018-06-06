@@ -1,0 +1,78 @@
+{
+	"title": "koch.ie",
+	"footer": {
+		"ABN": "123456789",
+		"author": "Robert Koch",
+		"github": "kochie"
+	},
+	"TextSection_1": {
+		"title": "",
+		"content": ""
+	},
+	"TextSection_2": {
+		"title": "",
+		"content": ""
+	},
+	"TextSection_3": {
+		"title": "",
+		"content": ""
+	},
+	"Portfolio": [{
+    "key": "halo",
+    "title": "Halo",
+    "img": "halo",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in felis in dolor consequat fringilla eget et quam. Nulla facilisi. Vivamus tincidunt gravida ex nec ultricies. Pellentesque posuere consectetur leo. Phasellus ac augue et orci tristique tempor. Donec sit amet erat ut enim imperdiet ullamcorper vitae vitae tortor.",
+    "featuredClass": "featured1"
+  }, {
+    "key": "halo1",
+    "title": "Halo",
+    "img": "halo",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in felis in dolor consequat fringilla eget et quam. Nulla facilisi. Vivamus tincidunt gravida ex nec ultricies. Pellentesque posuere consectetur leo. Phasellus ac augue et orci tristique tempor. Donec sit amet erat ut enim imperdiet ullamcorper vitae vitae tortor.",
+    "featuredClass": "featured2"
+  }, {
+    "key": "planet",
+    "title": "planet",
+    "img": "earth",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in felis in dolor consequat fringilla eget et quam. Nulla facilisi. Vivamus tincidunt gravida ex nec ultricies. Pellentesque posuere consectetur leo. Phasellus ac augue et orci tristique tempor. Donec sit amet erat ut enim imperdiet ullamcorper vitae vitae tortor.",
+    "featuredClass": "featured3"
+  }, {
+    "key": "planet1",
+    "title": "planet",
+    "img": "dreamer"
+  }, {
+    "key": "planet2",
+    "title": "planet",
+    "img": "egmont"
+  }, {
+    "key": "planet3",
+    "title": "planet",
+    "img": "gasGiant"
+  }, {
+    "key": "planet4",
+    "title": "planet",
+    "img": "gasGiant"
+  }, {
+    "key": "planet5",
+    "title": "planet",
+    "img": "nasa"
+	}],
+	"Countries": [{
+  "key": "halo",
+  "title": "Halo",
+  "img": "halo",
+  "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in felis in dolor consequat fringilla eget et quam. Nulla facilisi. Vivamus tincidunt gravida ex nec ultricies. Pellentesque posuere consectetur leo. Phasellus ac augue et orci tristique tempor. Donec sit amet erat ut enim imperdiet ullamcorper vitae vitae tortor.",
+  "featuredClass": "featured1"
+}, {
+  "key": "halo1",
+  "title": "Halo",
+  "img": "ukIreland",
+  "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in felis in dolor consequat fringilla eget et quam. Nulla facilisi. Vivamus tincidunt gravida ex nec ultricies. Pellentesque posuere consectetur leo. Phasellus ac augue et orci tristique tempor. Donec sit amet erat ut enim imperdiet ullamcorper vitae vitae tortor.",
+  "featuredClass": "featured2"
+}, {
+  "key": "planet",
+  "title": "planet",
+  "img": "egmont",
+  "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in felis in dolor consequat fringilla eget et quam. Nulla facilisi. Vivamus tincidunt gravida ex nec ultricies. Pellentesque posuere consectetur leo. Phasellus ac augue et orci tristique tempor. Donec sit amet erat ut enim imperdiet ullamcorper vitae vitae tortor.",
+  "featuredClass": "featured3"
+}]
+}

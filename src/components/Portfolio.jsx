@@ -2,75 +2,31 @@ import React from 'react';
 import { withStyles } from 'material-ui/styles';
 import PropTypes from 'prop-types';
 
-import Halo from '../assets/images/Halo.jpg';
-import Planet from '../assets/images/the-gas-giant-2560×1440.jpg';
+// import Halo from '../assets/images/Halo.jpg';
+// import Planet from '../assets/images/the-gas-giant-2560×1440.jpg';
+import Tile from './Tile';
 
-const tileData = [
-  {
-    key: 'halo',
-    title: 'Halo',
-    img: Halo,
-    featured: true,
-  },
-  {
-    key: 'planet',
-    title: 'planet',
-    img: Planet,
-    featured: false,
-  },
-  {
-    key: 'planet1',
-    title: 'planet',
-    img: Planet,
-    featured: false,
-  }, {
-    key: 'planet2',
-    title: 'planet',
-    img: Planet,
-    featured: false,
-  }, {
-    key: 'planet3',
-    title: 'planet',
-    img: Planet,
-    featured: false,
-  },
-];
 
-const Portfolio = ({ classes }) => (
+const Portfolio = ({ classes, tileData }) => (
   <div className={classes.root}>
-    {tileData.map(tile => (
-      <div className={[classes.gridItem, tile.featured ? classes.featured : ''].join(' ')} key={tile.key}>
-        <img src={tile.img} alt={tile.title} className={classes.img} />
-      </div>
-        ))}
+    {tileData.map(tile =>
+      (<Tile
+        key={tile.key}
+        tile={tile}
+        featuredClass={tile.featuredClass && classes[tile.featuredClass]}
+      />))}
   </div>
 );
 
-const styles = theme => ({
+const styles = () => ({
   root: {
     display: 'grid',
     gridTemplateColumns: 'repeat(5, 1fr)',
     gridTemplateRows: 'repeat(3, 1fr)',
-    // justifyContent: 'space-around',
     alignSelf: 'stretch',
     gridGap: 0,
-    backgroundColor: theme.palette.background.paper,
-  },
-  gridItem: {
-    overflow: 'hidden',
-    width: '100%',
-    justifyContent: 'center',
-    alignContent: 'center',
-  },
-  img: {
-    width: '100%',
-    height: '100%',
-    objectFit: 'cover',
   },
   gridList: {
-    // width: 500,
-    // height: 450,
-    // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
     transform: 'translateZ(0)',
   },
   titleBar: {
@@ -81,14 +37,23 @@ const styles = theme => ({
   icon: {
     color: 'white',
   },
-  featured: {
-    gridColumn: '2 / 4',
+  featured1: {
+    gridColumn: '1 / 3',
     gridRow: '1 / 3',
+  },
+  featured2: {
+    gridColumn: '4 / 6',
+    gridRow: '2 / 4',
+  },
+  featured3: {
+    gridColumn: '3 / 4',
+    gridRow: '2 / 4',
   },
 });
 
 Portfolio.propTypes = {
-  classes: PropTypes.objectOf(PropTypes.object).isRequired,
+  classes: PropTypes.objectOf(PropTypes.string).isRequired,
+  tileData: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 export default withStyles(styles, { withTheme: true })(Portfolio);
