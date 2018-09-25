@@ -1,5 +1,5 @@
 import React from 'react';
-import CssBaseline from 'material-ui/CssBaseline';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import PropTypes from 'prop-types';
 
 import Title from './Title';
@@ -13,7 +13,7 @@ import Footer from './Footer';
 const App = ({ config }) => (
   <div>
     <CssBaseline />
-    <Heading title={config.title} />
+    <Heading title={config.title} sections={["Portfolio", "Contact"]}/>
     <Title />
     <TextSection />
     <Portfolio tileData={config.Portfolio} />

@@ -1,19 +1,18 @@
 import React from 'react';
-import { withStyles } from 'material-ui/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Particles from 'react-particles-js';
-import Typography from 'material-ui/Typography';
-import Paper from 'material-ui/Paper';
+import Typography from '@material-ui/core/Typography';
+import Paper from '@material-ui/core/Paper';
 import PropTypes from 'prop-types';
 
+import Logo from '../logo.svg'
 import images from '../images';
 
 const Title = ({ classes, particleParams }) => (
   <div className={classes.container}>
     <Particles className={classes.particle} params={particleParams} />
     <Paper className={classes.title}>
-      <Typography>
-          Hello
-      </Typography>
+      <img src={Logo}/>
     </Paper>
   </div>
 );
