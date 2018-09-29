@@ -5,8 +5,8 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 
-const TextSection = ({ classes }) => (
-  <div className={classes.container}>
+const TextSection = ({ classes, id }) => (
+  <div className={classes.container} id={id}>
     <Grid container justify="center" alignItems="center" className={classes.gridContainer}>
       <Grid item>
         <Paper>

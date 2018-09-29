@@ -7,8 +7,8 @@ import PropTypes from 'prop-types';
 import Tile from './Tile';
 
 
-const Portfolio = ({ classes, tileData }) => (
-  <div className={classes.root}>
+const Portfolio = ({ classes, tileData, id }) => (
+  <div className={classes.root} id={id}>
     {tileData.map(tile =>
       (<Tile
         key={tile.key}

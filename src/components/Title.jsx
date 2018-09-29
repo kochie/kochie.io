@@ -9,11 +9,11 @@ import Logo from '../logo.svg'
 import images from '../images';
 
 const Title = ({ classes, particleParams }) => (
-  <div className={classes.container}>
+  <div className={classes.container} id="top">
     <Particles className={classes.particle} params={particleParams} />
-    <Paper className={classes.title}>
-      <img src={Logo}/>
-    </Paper>
+    <div className={classes.title}>
+      <img src={Logo} className={classes.logo}/>
+    </div>
   </div>
 );
 
@@ -75,10 +75,10 @@ const styles = {
     width: '100%',
   },
   title: {
-    position: 'absolute',
-    top: '50vh',
-    left: '50vw',
-    fontSize: 30,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "100%"
   },
   container: {
     position: 'relative',
@@ -86,6 +86,12 @@ const styles = {
     left: 0,
     height: '100vh',
   },
+  logo: {
+    position: "absolute",
+    pointerEvents: "none",
+    width: '500px',
+    height: '500px'
+  }
 };
 
 export default withStyles(styles, { withStyles: true })(Title);

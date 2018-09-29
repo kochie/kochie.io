@@ -10,17 +10,19 @@ import Countries from './Countries';
 import Contact from './Contact';
 import Footer from './Footer';
 
+const sections = [{name:"About"}, {name:"Portfolio"}, {name:"Locations"}, {name:"Contact"}]
+
 const App = ({ config }) => (
   <div>
     <CssBaseline />
-    <Heading title={config.title} sections={["Portfolio", "Contact"]}/>
+    <Heading title={config.title} sections={sections}/>
     <Title />
+    <TextSection id="about" />
+    <Portfolio tileData={config.Portfolio} id="portfolio"/>
     <TextSection />
-    <Portfolio tileData={config.Portfolio} />
+    <Countries countries={config.Countries} id="locations"/>
     <TextSection />
-    <Countries countries={config.Countries} />
-    <TextSection />
-    <Contact emailAddress="robert@kochie.io" />
+    <Contact emailAddress="robert@kochie.io" id="contact"/>
     <Footer />
   </div>
 );
