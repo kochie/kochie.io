@@ -48,8 +48,22 @@ const styles = {
   },
   link: {
     padding: '0px 2.5%',
+    transform: 'scale3d(0.9,0.9,1)',
+    transition: 'all 0.5s ease',
+    backfaceVisibility: 'hidden',
+    textDecoration: 'none',
+    '&:hover': {
+      transform: 'scale3d(1,1,1)',
+      transition: 'all 0.5s ease',
+      backfaceVisibility: 'hidden',
+    }
   },
 };
+
+const scrollToID = (event, id) => {
+  event.preventDefault()
+  scrollTo({top: document.getElementById(id).offsetTop, behavior: 'smooth'})
+}
 
 const Heading = ({ classes, sections }) => {
   const s1 = sections.splice(0, Math.floor(sections.length / 2));
@@ -60,25 +74,25 @@ const Heading = ({ classes, sections }) => {
         <Toolbar className={classes.toolbar}>
           <div className={classes.leftMenu}>
             {s1.map(section => (
-              <Typography variant="title" color="inherit" className={classes.link}>
-                <a href={`#${section.name.toLowerCase()}`}>
+                <a href={`#${section.name.toLowerCase()}`} onClick={(e) => scrollToID(e, section.name.toLowerCase())} className={classes.link}>
+              <Typography variant="title" color="default">
                   {section.name}
-                </a>
               </Typography>
+                </a>
             ))}
           </div>
           <div className={classes.middle}>
-            <a href="#top">
+            <a href="#top" onClick={(e) => scrollToID(e, 'top')}>
               <img src={Logo} alt="return logo" className={classes.icon} />
             </a>
           </div>
           <div className={classes.rightMenu}>
             {s2.map(section => (
-              <Typography variant="title" color="inherit" className={classes.link}>
-                <a href={`#${section.name.toLowerCase()}`}>
+                <a href={`#${section.name.toLowerCase()}`} className={classes.link} onClick={(e) => scrollToID(e, section.name.toLowerCase())}>
+              <Typography variant="title" color="default">
                   {section.name}
-                </a>
               </Typography>
+                </a>
             ))}
           </div>
         </Toolbar>
