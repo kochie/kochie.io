@@ -8,13 +8,16 @@ import Tile from './Tile';
 
 
 const Portfolio = ({ classes, tileData, id }) => (
-  <div className={classes.root} id={id}>
-    {tileData.map(tile =>
+  <div>
+    <div id={id} className={classes.list} />
+    <div className={classes.root}>
+      {tileData.map(tile =>
       (<Tile
         key={tile.key}
         tile={tile}
         featuredClass={tile.featuredClass && classes[tile.featuredClass]}
       />))}
+    </div>
   </div>
 );
 
@@ -25,6 +28,10 @@ const styles = () => ({
     gridTemplateRows: 'repeat(3, 1fr)',
     alignSelf: 'stretch',
     gridGap: 0,
+  },
+  list: {
+    top: -64,
+    position: 'relative',
   },
   gridList: {
     transform: 'translateZ(0)',

@@ -6,7 +6,8 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 
 const TextSection = ({ classes, id }) => (
-  <div className={classes.container} id={id}>
+  <div className={classes.container}>
+    <div id={id} className={classes.link} />
     <Grid container justify="center" alignItems="center" className={classes.gridContainer}>
       <Grid item>
         <Paper>
@@ -27,6 +28,10 @@ const styles = {
   container: {
     height: '50vh',
     backgroundColor: '#2a2f4a',
+  },
+  link: {
+    position: 'relative',
+    // top: -64,
   },
   gridContainer: {
     height: '100%',

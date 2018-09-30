@@ -7,8 +7,9 @@ import Send from '@material-ui/icons/Send';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 
-const Contact = ({ classes, emailAddress }) => (
+const Contact = ({ classes, emailAddress, id }) => (
   <div className={classes.root}>
+    <div className={classes.list} id={id} />
     <div className={classes.container}>
       <div className={classes.text}>
         <Typography>Lorum Ipsum</Typography>
@@ -63,6 +64,10 @@ const styles = theme => ({
   },
   formElement: {
     marginTop: 15,
+  },
+  list: {
+    position: 'relative',
+    top: -64,
   },
 });
 

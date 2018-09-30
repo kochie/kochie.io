@@ -5,14 +5,15 @@ import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import PropTypes from 'prop-types';
 
-import Logo from '../logo.svg'
+import Logo from '../logo.svg';
 import images from '../images';
 
 const Title = ({ classes, particleParams }) => (
-  <div className={classes.container} id="top">
+  <div className={classes.container}>
+    <div id="top" className={classes.list} />
     <Particles className={classes.particle} params={particleParams} />
     <div className={classes.title}>
-      <img src={Logo} className={classes.logo}/>
+      <img src={Logo} alt="koch.ie" className={classes.logo} />
     </div>
   </div>
 );
@@ -67,7 +68,7 @@ const styles = {
     position: 'absolute',
     top: 0,
     left: 0,
-    height: '100vh',
+    height: 'calc(100vh - 64px)',
     backgroundColor: '#37364a',
     backgroundImage: `url(${images.earth})`,
     backgroundPosition: '50% 50%',
@@ -75,23 +76,27 @@ const styles = {
     width: '100%',
   },
   title: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    height: "100%"
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100%',
   },
   container: {
     position: 'relative',
-    top: 0,
+    top: '64px',
     left: 0,
-    height: '100vh',
+    height: 'calc(100vh - 64px)',
   },
   logo: {
-    position: "absolute",
-    pointerEvents: "none",
+    position: 'absolute',
+    pointerEvents: 'none',
     width: '500px',
-    height: '500px'
-  }
+    height: '500px',
+  },
+  list: {
+    position: 'relative',
+    top: -64,
+  },
 };
 
 export default withStyles(styles, { withStyles: true })(Title);

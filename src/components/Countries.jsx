@@ -5,12 +5,16 @@ import { withStyles } from '@material-ui/core/styles';
 import Tile from './Tile';
 
 
-const Countries = ({ classes, countries }) => (
-  <div className={classes.root}>
-    {countries.map(country => (
-      <Tile tile={country} />
+const Countries = ({ classes, countries, id }) => (
+  <div>
+    <div id={id} className={classes.list} />
+    <div className={classes.root}>
+      {countries.map(country => (
+        <Tile tile={country} />
 ))}
+    </div>
   </div>
+
 );
 
 Countries.propTypes = {
@@ -23,6 +27,10 @@ const styles = {
     display: 'grid',
     gridTemplateColumns: 'repeat(3, 1fr)',
     gridTemplateRows: 'repeat(1, 1fr)',
+  },
+  list: {
+    position: 'relative',
+    top: -64,
   },
 };
 
