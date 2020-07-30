@@ -7,33 +7,24 @@
   "dependencies": {
     "@material-ui/core": "^3.1.1",
     "@material-ui/icons": "^3.0.1",
-    "file-loader": "^1.1.11",
     "material-ui": "^0.20.2",
-    "prop-types": "^15.6.1",
+    "next": "^9.5.1",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-particles-js": "^2.1.2",
     "webfontloader": "^1.6.28"
   },
   "devDependencies": {
-    "autoprefixer": "^8.3.0",
-    "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.10.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
-    "jest": "^22.4.3",
-    "parcel-bundler": "^1.9.7",
-    "postcss-modules": "^1.1.0"
+    "jest": "^22.4.3"
   },
   "scripts": {
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html",
-    "test": "jest",
-    "deploy": "cd ./dist && now -A ../now.json && now alias -A ../now.json"
+    "dev": "next",
+    "build": "next build",
+    "test": "jest"
   }
 }
