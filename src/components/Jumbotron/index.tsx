@@ -1,18 +1,18 @@
+"use client"
+
 import Image from "next/legacy/image";
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
 import { Container, Engine } from "tsparticles/types/bundle";
 
-import Earth from "../../assets/images/earth.jpg";
+import Earth from "@/assets/images/earth.jpg";
 import { PARTICLES } from "./particles";
 
 export const Jumbotron = () => {
   const particlesInit = useCallback(async (engine: Engine) => {
     // console.log(engine);
-
     await loadFull(engine);
-
     // you can initialize the tsParticles instance (main) here, adding custom shapes or presets
   }, []);
 
