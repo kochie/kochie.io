@@ -4,7 +4,7 @@ import KochieSpace from "../../assets/images/kochie-space.png";
 import BlogKochieIo from "../../assets/images/blog-kochie-io.png";
 import ThreeBody from "../../assets/images/3body.png";
 
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 
 export const ProjectGrid = () => {
