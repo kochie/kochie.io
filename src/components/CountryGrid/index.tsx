@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 
 import Australia from "../../assets/images/Australia.jpg";
@@ -34,11 +34,13 @@ export const CountryGrid = () => {
           <Image
             src={project.image}
             alt={project.name}
-            layout="fill"
-            objectFit="cover"
-            objectPosition="top left"
             className="group-hover:scale-110 transform-gpu duration-200 group-hover:opacity-50 bg-black"
-          />
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "cover",
+              objectPosition: "top left"
+            }} />
           <div className="group-hover:opacity-100 opacity-0 transform-gpu duration-200 text-white font-mono flex flex-col m-10 ">
             <h1 className="underline mb-3">
               <Link href={project.link} legacyBehavior>{project.name}</Link>

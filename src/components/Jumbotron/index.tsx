@@ -1,6 +1,6 @@
 "use client"
 
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { useCallback } from "react";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
@@ -28,11 +28,13 @@ export const Jumbotron = () => {
       <Image
         src={Earth}
         placeholder="blur"
-        layout="fill"
-        objectFit="cover"
         className="w-full h-full relative "
         alt="earth"
-      />
+        fill
+        sizes="100vw"
+        style={{
+          objectFit: "cover"
+        }} />
       <div className="absolute h-full w-full bg-black opacity-40" />
       <Particles
         // style={{ position: "absolute" }}

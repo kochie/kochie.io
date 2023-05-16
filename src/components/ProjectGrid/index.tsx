@@ -4,7 +4,7 @@ import KochieSpace from "../../assets/images/kochie-space.png";
 import BlogKochieIo from "../../assets/images/blog-kochie-io.png";
 import ThreeBody from "../../assets/images/3body.png";
 
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from "next/link";
 
 export const ProjectGrid = () => {
@@ -78,10 +78,12 @@ export const ProjectGrid = () => {
           <Image
             src={project.image}
             alt={project.name}
-            layout="fill"
-            objectFit="cover"
             className="group-hover:scale-110 transform-gpu duration-200 group-hover:opacity-60"
-          />
+            fill
+            sizes="100vw"
+            style={{
+              objectFit: "cover"
+            }} />
           <div className="group-hover:opacity-100 opacity-0 transform-gpu duration-200 text-white font-mono flex flex-col m-10 ">
             <h1 className="underline mb-3">
               <Link href={project.link} legacyBehavior>{project.name}</Link>
