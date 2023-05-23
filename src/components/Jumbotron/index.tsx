@@ -12,7 +12,7 @@ import WaveBottom from "../Transitions/WaveBottom";
 import WaveTop from "../Transitions/WaveTop";
 import WaveTopTransparent from "../Transitions/WaveTopTransparent";
 
-export default function() {
+export default function Jumbotron() {
   const particlesInit = useCallback(async (engine: Engine) => {
     // console.log(engine);
     await loadFull(engine);
