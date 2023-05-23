@@ -1,4 +1,8 @@
-export * from "./ProjectGrid";
-export * from "./CountryGrid";
-export * from "./Jumbotron";
-export * from "./TopBar";
+export {default as BlogArticles} from "./BlogArticles"
+export {default as Contact} from "./Contact"
+export {default as CountryGrid} from "./CountryGrid"
+export {default as Footer} from "./Footer"
+export {default as Jumbotron} from "./Jumbotron"
+export {default as ProjectGrid} from "./ProjectGrid"
+// export {default as Theme} from "./Theme"
+export {default as TopBar} from "./TopBar" 

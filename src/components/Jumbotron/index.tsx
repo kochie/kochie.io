@@ -8,8 +8,11 @@ import { Container, Engine } from "tsparticles/types/bundle";
 
 import Earth from "@/assets/images/earth.jpg";
 import { PARTICLES } from "./particles";
+import WaveBottom from "../Transitions/WaveBottom";
+import WaveTop from "../Transitions/WaveTop";
+import WaveTopTransparent from "../Transitions/WaveTopTransparent";
 
-export const Jumbotron = () => {
+export default function() {
   const particlesInit = useCallback(async (engine: Engine) => {
     // console.log(engine);
     await loadFull(engine);
@@ -24,11 +27,11 @@ export const Jumbotron = () => {
   );
 
   return (
-    <div className="w-screen h-screen relative">
+    <div className="w-screen h-[calc(100vh+320px)] relative">
       <Image
         src={Earth}
         placeholder="blur"
-        className="w-full h-full relative "
+        className="w-full h-full relative blur-[1px]"
         alt="earth"
         fill
         sizes="100vw"
@@ -55,6 +58,9 @@ export const Jumbotron = () => {
             </h2>
           </div>
         </div>
+      </div>
+      <div className="z-30 absolute bottom-0 pointer-events-none -mb-1">
+        <WaveTopTransparent />
       </div>
     </div>
   );
