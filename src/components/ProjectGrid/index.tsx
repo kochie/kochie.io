@@ -79,6 +79,7 @@ export default function ProjectGrid() {
           >
             <Image
               src={project.image}
+              placeholder="blur"
               alt={project.name}
               className="group-hover:scale-110 transform-gpu duration-200 group-hover:opacity-30"
               fill

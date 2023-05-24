@@ -66,6 +66,7 @@ export default function CountryGrid() {
               alt={project.name}
               className=" group-hover:scale-110 transform-gpu duration-200 group-hover:opacity-30 bg-black h-full w-full"
               fill
+              placeholder="blur"
               sizes="100vw"
               style={{
                 objectFit: "fill",
