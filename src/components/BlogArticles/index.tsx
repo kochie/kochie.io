@@ -66,7 +66,7 @@ export default function BlogArticles() {
               else if (date1 == date2) return 0;
               return 1;
             })
-            .filter(article => article.tags.find(tag => ["frontend", "software"].find(key => key === tag)))
+            .filter(article => article.tags.find(tag => ["frontend", "software", "webdev"].find(key => key === tag)))
             .slice(0, 3)
             .map((post) => (
               <article

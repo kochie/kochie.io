@@ -1,6 +1,7 @@
-import { IOptions, RecursivePartial } from "tsparticles/types/bundle";
+import { useMemo } from "react";
+import { ISourceOptions } from "tsparticles/types/bundle";
 
-export const PARTICLES: RecursivePartial<IOptions> = {
+export const options: ISourceOptions = {
   fullScreen: false,
   interactivity: {
     detectsOn: "canvas",
@@ -73,4 +74,4 @@ export const PARTICLES: RecursivePartial<IOptions> = {
     },
   },
   detectRetina: true,
-};
+}
