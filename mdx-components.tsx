@@ -17,7 +17,7 @@ const a = ({ children, href }) => (
   <Link
     href={href}
     className="underline dark:text-orange-300 dark:hover:text-orange-600 text-indigo-600 hover:text-indigo-900 cursor-pointer"
-  >
+    legacyBehavior>
     {children}
   </Link>
 );
