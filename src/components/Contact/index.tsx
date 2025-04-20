@@ -11,7 +11,6 @@ export default function Contact() {
       </div>
 
       <Cal
-        preload
         calLink="kochie/15min"
         config={{
           name: "Robert Koch",

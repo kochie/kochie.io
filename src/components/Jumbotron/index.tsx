@@ -1,10 +1,10 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 // import { loadFull } from "tsparticles";
-import { loadSlim } from "@tsparticles/slim"
+import { loadSlim } from "@tsparticles/slim";
 import { Container } from "tsparticles/types/bundle";
 
 import Earth from "@/assets/images/earth.jpg";
@@ -12,6 +12,10 @@ import { options } from "./particles";
 import WaveBottom from "../Transitions/WaveBottom";
 import WaveTop from "../Transitions/WaveTop";
 import WaveTopTransparent from "../Transitions/WaveTopTransparent";
+
+import Logo from "@/assets/images/KochieEngineeringLogo.svg";
+
+
 
 export default function Jumbotron() {
   const [init, setInit] = useState(false);
@@ -45,8 +49,9 @@ export default function Jumbotron() {
         fill
         sizes="100vw"
         style={{
-          objectFit: "cover"
-        }} />
+          objectFit: "cover",
+        }}
+      />
       <div className="absolute h-full w-full bg-black opacity-40" />
       <Particles
         // style={{ position: "absolute" }}
@@ -58,12 +63,7 @@ export default function Jumbotron() {
       <div className="absolute w-screen h-screen">
         <div className="relative flex justify-center top-1/3">
           <div>
-            <h1 className="text-4xl text-white text-center my-3">
-              Web Development
-            </h1>
-            <h2 className="text-2xl text-white text-center">
-              Without the complexity
-            </h2>
+            <Image src={Logo} alt="Kochie Engineering Logo" className="z-10 mx-auto" width={500} />
           </div>
         </div>
       </div>
@@ -72,4 +72,4 @@ export default function Jumbotron() {
       </div>
     </div>
   );
-};
+}

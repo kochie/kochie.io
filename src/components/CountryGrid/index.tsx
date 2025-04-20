@@ -75,7 +75,7 @@ export default function CountryGrid() {
             />
             <div className="group-hover:opacity-100 opacity-0 transform-gpu duration-200 text-white font-mono flex flex-col m-5">
               <h1 className="underline mb-3">
-                <Link href={project.link} legacyBehavior>
+                <Link href={project.link} >
                   {project.name}
                 </Link>
               </h1>
