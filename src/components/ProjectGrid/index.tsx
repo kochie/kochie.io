@@ -1,9 +1,9 @@
-import TouchTyper from "@/assets/images/touch-typer.png";
-import MeKochieIo from "@/assets/images/me-kochie-io.png";
-import KochieSpace from "@/assets/images/kochie-space.png";
-import BlogKochieIo from "@/assets/images/blog-kochie-io.png";
-import ThreeBody from "@/assets/images/3body.png";
-import Halo from "@/assets/images/halo.jpg";
+import TouchTyper from "./src/assets/images/touch-typer.png";
+import MeKochieIo from "./src/assets/images/me-kochie-io.png";
+import KochieSpace from "./src/assets/images/kochie-space.png";
+import BlogKochieIo from "./src/assets/images/blog-kochie-io.png";
+import ThreeBody from "./src/assets/images/3body.png";
+import Halo from "./src/assets/images/halo.jpg";
 
 import Image from 'next/image'
 import Link from "next/link"

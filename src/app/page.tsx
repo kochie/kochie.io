@@ -1,13 +1,13 @@
 import React from "react";
 
-import { CountryGrid, Jumbotron, ProjectGrid, TopBar } from "@/components";
-import Footer from "@/components/Footer";
-import BlogArticles from "@/components/BlogArticles";
-import Contact from "@/components/Contact";
-import WaveBottom from "@/components/Transitions/WaveBottom";
-import WaveTop from "@/components/Transitions/WaveTop";
-import Peaks from "@/components/Transitions/Peaks";
-import TextHero from "@/components/TextHero";
+import { CountryGrid, Jumbotron, ProjectGrid, TopBar } from "./src/components";
+import Footer from "./src/components/Footer";
+import BlogArticles from "./src/components/BlogArticles";
+import Contact from "./src/components/Contact";
+import WaveBottom from "./src/components/Transitions/WaveBottom";
+import WaveTop from "./src/components/Transitions/WaveTop";
+import Peaks from "./src/components/Transitions/Peaks";
+import TextHero from "./src/components/TextHero";
 
 const Index = () => {
   return (

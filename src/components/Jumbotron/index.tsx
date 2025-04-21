@@ -7,13 +7,13 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 import { Container } from "tsparticles/types/bundle";
 
-import Earth from "@/assets/images/earth.jpg";
+import Earth from "./src/assets/images/earth.jpg";
 import { options } from "./particles";
 import WaveBottom from "../Transitions/WaveBottom";
 import WaveTop from "../Transitions/WaveTop";
 import WaveTopTransparent from "../Transitions/WaveTopTransparent";
 
-import Logo from "@/assets/images/KochieEngineeringLogo.svg";
+import Logo from "./src/assets/images/KochieEngineeringLogo.svg";
 
 
 

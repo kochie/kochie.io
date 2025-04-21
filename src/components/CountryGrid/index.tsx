@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import Australia from "@/assets/images/Australia.jpg";
-import USA from "@/assets/images/USA.jpg";
-import Ireland from "@/assets/images/ireland.jpg";
-import UK from "@/assets/images/uk.png";
-import NZ from "@/assets/images/nz.jpg";
-import World from "@/assets/images/world.png"
+import Australia from "./src/assets/images/Australia.jpg";
+import USA from "./src/assets/images/USA.jpg";
+import Ireland from "./src/assets/images/ireland.jpg";
+import UK from "./src/assets/images/uk.png";
+import NZ from "./src/assets/images/nz.jpg";
+import World from "./src/assets/images/world.png"
 
 import Text from "./text.mdx";
 
