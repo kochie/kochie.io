@@ -54,7 +54,7 @@ export default function Footer() {
               <Link
                 href={item.href}
                 className="text-sm leading-6  hover:text-gray-900"
-                >
+                legacyBehavior>
                 {item.name}
               </Link>
             </div>
@@ -66,7 +66,7 @@ export default function Footer() {
               key={item.name}
               href={item.href}
               className="transform duration-200 hover:scale-110"
-              >
+              legacyBehavior>
               <span className="sr-only">{item.name}</span>
               <item.icon className="h-6 w-6" aria-hidden="true" />
             </Link>
