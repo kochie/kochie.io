@@ -2,7 +2,7 @@
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import Providers from "./providers";
-import { ThemeButton } from "./src/components/Theme";
+import { ThemeButton } from "../components/Theme";
 
 import "./globals.css";
 
