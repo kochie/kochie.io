@@ -3,6 +3,6 @@ dist/
 .cache/
 .next/
 
-**/*/.DS_Store
+**/.DS_Store
 
 .env
