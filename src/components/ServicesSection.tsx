@@ -54,7 +54,7 @@ const ServicesSection = () => {
       <StarsBackground numberOfStars={50} />
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="section-heading">Building a website doesn't have to be a headache</h2>
+        <h2 className="section-heading">Building a website doesn&apos;t have to be a headache</h2>
         <p className="section-subheading">
           Our streamlined process makes web development simple, transparent, and stress-free
         </p>
@@ -73,7 +73,7 @@ const ServicesSection = () => {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="mb-6 md:mb-0 md:mr-8">
               <h3 className="text-2xl font-bold text-white mb-2">Ready to launch your next project?</h3>
-              <p className="text-gray-300">Let's work together to create something amazing.</p>
+              <p className="text-gray-300">Let&apos;s work together to create something amazing.</p>
             </div>
             <a href="#contact" className="btn-primary whitespace-nowrap">Get Started</a>
           </div>

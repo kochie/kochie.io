@@ -41,12 +41,7 @@ const HeroSection = () => {
             </a>
           </div>
         </div>
-        
-        <div className="absolute bottom-12 left-0 right-0 text-center">
-          <a href="#projects" className="inline-block animate-float">
-            <ChevronDown size={32} className="text-white" />
-          </a>
-        </div>
+      
       </div>
     </section>
   );

@@ -26,7 +26,7 @@ const a = ({ children, href }) => (
 const img = ({ src, alt }) => (
   <Image
     src={src}
-    s
+
     alt={alt}
     className="my-10 rounded-xl"
     style={{

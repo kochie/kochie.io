@@ -1,66 +1,68 @@
-
-import { ExternalLink, Code, Monitor } from "lucide-react";
+import { ExternalLink, Monitor } from "lucide-react";
 import StarsBackground from "./StarsBackground";
+import Image from "next/image";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+
+import TouchTyper from "@/assets/images/touch_typer.png";
+import MetaFixer from "@/assets/images/metafixer.png";
+import MeKochieIo from "@/assets/images/me-kochie-io.png";
+import KochieSpace from "@/assets/images/kochie-space.png";
+import ContactTracing from "@/assets/images/ct.png";
+import ThreeBody from "@/assets/images/3body.png";
 
 type Project = {
-  id: number;
   title: string;
   description: string;
   tags: string[];
-  image: string;
+  image: StaticImport
   url?: string;
 };
 
 const projects: Project[] = [
   {
-    id: 1,
-    title: "SpaceTech Dashboard",
-    description: "Admin dashboard for space technology management",
-    tags: ["React", "TypeScript", "Tailwind"],
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    url: "#"
+    title: "Touch Typer",
+    image: TouchTyper,
+    url: "https://touch-typer.kochie.io",
+    description: "A new way to learn touch typing on any platform.",
+    tags: ["electron", "typescript", "web", "macOS", "windows", "linux"],
   },
   {
-    id: 2,
-    title: "Lunar Analytics",
-    description: "Data visualization platform for space research",
-    tags: ["Vue", "D3.js", "Node.js"],
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    url: "#"
+    title: "MetaFixer",
+    image: MetaFixer,
+    url: "https://metafixer.kochie.io",
+    description: "A tool to recover lost metadata from your photos.",
+    tags: ["MacOS", "SwiftUI"],
   },
   {
-    id: 3,
-    title: "Mission Control",
-    description: "Real-time mission monitoring application",
-    tags: ["React", "WebSockets", "GraphQL"],
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    url: "#"
+    title: "me.kochie.io",
+    image: MeKochieIo,
+    url: "https://me.kochie.io",
+    description: "My personal website. A place to share my thoughts and projects.",
+    tags: ["web", "typescript", "react", "nextjs"],
   },
   {
-    id: 4,
-    title: "AstroConnect",
-    description: "Social platform for space enthusiasts",
-    tags: ["Next.js", "MongoDB", "AWS"],
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    url: "#"
+    title: "kochie.space",
+    image: KochieSpace,
+    url: "https://kochie.space",
+    description: "A technical demo for web based animations using simple JavaScript and CSS.",
+    tags: ["web", "vanillajs", "2d"],
   },
   {
-    id: 5,
-    title: "CosmoTracker",
-    description: "Celestial object tracking and visualization",
-    tags: ["Three.js", "WebGL", "React"],
-    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    url: "#"
+    title: "Contact Tracing",
+    image: ContactTracing,
+    url: "https://ct.vercel.app",
+    description: "Technical demo for contract tracing at large scale based on real world data and AWS infrastructure.",
+    tags: ["web", "typescript", "react", "nextjs", "aws"],
   },
   {
-    id: 6,
-    title: "OrbitalCMS",
-    description: "Content management system for space agencies",
-    tags: ["Strapi", "React", "PostgreSQL"],
-    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80",
-    url: "#"
-  }
+    title: "3Body",
+    image: ThreeBody,
+    url: "https://3body.vercel.app",
+    description: "A n-Body simulator running in 3D on the web browser using webgl and ThreeJS.",
+    tags: ["web", "typescript", "react", "nextjs", "threejs"],
+  },
 ];
+
 
 const ProjectsSection = () => {
   return (
@@ -70,17 +72,19 @@ const ProjectsSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="section-heading">Check out some of our work</h2>
         <p className="section-subheading">
-          We've helped businesses of all sizes launch successful web projects that deliver results
+          We&apos;ve helped businesses of all sizes launch successful web projects that deliver results
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
           {projects.map((project) => (
             <div 
-              key={project.id} 
-              className="bg-space-dark border border-gray-800 rounded-lg overflow-hidden card-hover group"
+              key={project.title} 
+              className="bg-space-dark border border-gray-800 rounded-lg overflow-hidden group z-10"
             >
               <div className="relative h-48 overflow-hidden">
-                <img 
+                <Image
+                  fill
+                  placeholder="blur"
                   src={project.image} 
                   alt={project.title} 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"

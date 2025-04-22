@@ -1,4 +1,5 @@
 
+import Image from "next/image";
 import StarsBackground from "./StarsBackground";
 
 const countries = [
@@ -25,15 +26,16 @@ const GlobalSection = () => {
           {countries.map((country) => (
             <div 
               key={country.code}
-              className="flex flex-col items-center group card-hover"
+              className="flex flex-col items-center group"
             >
-              <div className="w-full h-40 relative overflow-hidden rounded-lg shadow-lg mb-4">
-                <img 
+              <div className="w-full h-30 relative overflow-hidden rounded-lg shadow-lg mb-4">
+                <Image 
+                  fill
                   src={country.flag} 
                   alt={`${country.name} flag`} 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full aspect-[4/3] object-cover"
                 />
-                <div className="absolute inset-0 bg-space-dark/20 group-hover:bg-space-dark transition-all"></div>
+                <div className="absolute inset-0 bg-space-dark/20 transition-all"></div>
               </div>
               <p className="text-white font-medium text-lg">{country.name}</p>
             </div>
@@ -45,7 +47,7 @@ const GlobalSection = () => {
             <div className="flex-1">
               <h3 className="text-2xl font-bold text-white mb-2">24/7 Support Wherever You Are</h3>
               <p className="text-gray-300">
-                Our global team ensures that help is always available, no matter what timezone you're in. 
+                Our global team ensures that help is always available, no matter what timezone you&apos;re in. 
                 We provide multilingual support and local expertise to serve clients around the world.
               </p>
             </div>

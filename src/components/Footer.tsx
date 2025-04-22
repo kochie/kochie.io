@@ -1,6 +1,8 @@
 
-import { Mail, Phone, MapPin, Twitter, Facebook, Linkedin, Github } from "lucide-react";
-import Logo from "./Logo";
+import { Mail, Phone, MapPin, Twitter, Facebook, Linkedin, Github, Copyright } from "lucide-react";
+import Logo from "@/assets/images/KochieEngineeringLogo.svg";
+import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -9,24 +11,21 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <div className="mb-4">
-              <Logo />
+              <Image src={Logo} alt="Koch Engineering Logo" className="h-10" height={40} />
             </div>
             <p className="text-gray-400 mb-4">
-              Creating innovative web solutions with a cosmic touch.
+              Creating innovative web solutions that empower businesses to thrive in the digital age.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              <Link href="https://twitter.com/kochie" className="text-gray-400 hover:text-white transition-colors">
                 <Twitter size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              </Link>
+              <Link href="https://www.linkedin.com/company/kochie" className="text-gray-400 hover:text-white transition-colors">
                 <Linkedin size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+              </Link>
+              <Link href="https://github.com/kochie" className="text-gray-400 hover:text-white transition-colors">
                 <Github size={20} />
-              </a>
+              </Link>
             </div>
           </div>
           
@@ -58,22 +57,18 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin size={20} className="text-accent mr-2 mt-1 flex-shrink-0" />
-                <span className="text-gray-400">123 Space Station, Orbit City, Universe</span>
-              </li>
-              <li className="flex items-center">
-                <Phone size={20} className="text-accent mr-2 flex-shrink-0" />
-                <span className="text-gray-400">+123 456 7890</span>
+                <span className="text-gray-400">Melbourne, Australia</span>
               </li>
               <li className="flex items-center">
                 <Mail size={20} className="text-accent mr-2 flex-shrink-0" />
-                <span className="text-gray-400">hello@koch.ie</span>
+                <span className="text-gray-400"><Link href="mailto:hello@kochie.io" className="hover:underline">hello@kochie.io</Link></span>
               </li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-500">
-          <p>&copy; {new Date().getFullYear()} Koch Engineering. All rights reserved.</p>
+          <span className="flex items-center justify-center gap-3"><Copyright /> 2025 Kochie Engineering. All rights reserved.</span>
         </div>
       </div>
     </footer>
