@@ -22,7 +22,7 @@ const ContactSection = () => {
     sendMessage,
     initialState
   );
-  const toast = useToast();
+  const { toast: showToast } = useToast();
 
   useEffect(() => {
     (async function () {
@@ -34,20 +34,19 @@ const ContactSection = () => {
   useEffect(() => {
     console.log("State changed:", state);
     if (state.status === "success") {
-      toast.toast({
+      showToast({
         title: "Message Sent",
         description: "Your message has been sent successfully!",
         variant: "default",
       });
     } else if (state.status === "error") {
-      toast.toast({
+      showToast({
         title: "Error",
         description: "There was an error sending your message.",
         variant: "destructive",
       });
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [state]);
+  }, [state, showToast]);
 
   return (
     <section id="contact" className="py-24 bg-space-darker relative">
