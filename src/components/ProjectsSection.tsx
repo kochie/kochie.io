@@ -1,3 +1,5 @@
+"use client"
+
 import { ExternalLink, Monitor } from "lucide-react";
 import StarsBackground from "./StarsBackground";
 import Image from "next/image";

@@ -1,9 +1,9 @@
+"use client"
+
 import {
   Mail,
-  Phone,
   MapPin,
   Twitter,
-  Facebook,
   Linkedin,
   Github,
   Copyright,
