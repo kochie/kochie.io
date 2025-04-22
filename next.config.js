@@ -20,7 +20,7 @@ const nextConfig = {
     },
   },
   images: {
-    remotePatterns: [{ hostname: "images.unsplash.com" }, {hostname: "blog.kochie.io"}],
+    remotePatterns: [{ hostname: "images.unsplash.com" }, {hostname: "blog.kochie.io"}, {hostname: "upload.wikimedia.org"}],
   },
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   // Optionally, add any other Next.js config below

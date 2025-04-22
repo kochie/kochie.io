@@ -11,19 +11,22 @@ const h2 = ({ children }) => (
   </h2>
 );
 const p = ({ children }) => (
-  <p className="mt-2 text-lg leading-8 text-gray-600 dark:text-white">{children}</p>
+  <p className="mt-2 text-lg leading-8 text-gray-600 dark:text-white">
+    {children}
+  </p>
 );
 const a = ({ children, href }) => (
   <Link
     href={href}
     className="underline dark:text-orange-300 dark:hover:text-orange-600 text-indigo-600 hover:text-indigo-900 cursor-pointer"
-  >
+    >
     {children}
   </Link>
 );
 const img = ({ src, alt }) => (
   <Image
     src={src}
+
     alt={alt}
     className="my-10 rounded-xl"
     style={{
