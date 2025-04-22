@@ -1,37 +1,24 @@
+import BlogSection from "@/components/BlogSection";
+import ContactSection from "@/components/ContactSection";
+import Footer from "@/components/Footer";
+import GlobalSection from "@/components/GlobalSection";
+import HeroSection from "@/components/HeroSection";
+import Navbar from "@/components/Navbar";
+import ProjectsSection from "@/components/ProjectsSection";
+import ServicesSection from "@/components/ServicesSection";
 import React from "react";
 
-import { CountryGrid, Jumbotron, ProjectGrid, TopBar } from "@/components";
-import Footer from "@/components/Footer";
-import BlogArticles from "@/components/BlogArticles";
-import Contact from "@/components/Contact";
-import WaveBottom from "@/components/Transitions/WaveBottom";
-import WaveTop from "@/components/Transitions/WaveTop";
-import Peaks from "@/components/Transitions/Peaks";
-import TextHero from "@/components/TextHero";
 
 const Index = () => {
   return (
-    <div className="scroll-smooth dark:bg-slate-600">
-      <TopBar />
-      <Jumbotron />
-      <div id="about" className="scroll-m-12" />
-      <TextHero title="Web Development, Made Simple."/>
-      <div id="projects" className="scroll-m-12" />
-      <ProjectGrid />
-      <TextHero title="Building a website doesn't have to be a headache." content={[
-        "Choosing the right CMS, designing pages, sorting out SEO, managing security, and backing everything up — it's a lot to handle, especially when you've got a business to run."
-      ]}/>
-      <WaveBottom />
-      <div id="info" className="scroll-m-12" />
-      <div id="availability" className="scroll-m-12" />
-      <CountryGrid />
-      <TextHero title="Building a website doesn't have to be a headache." content={[
-        "Choosing the right CMS, designing pages, sorting out SEO, managing security, and backing everything up — it's a lot to handle, especially when you've got a business to run."
-      ]}/>
-      <BlogArticles />
-      <div id="contact" className="scroll-m-12" />
-      <Contact />
-      <Peaks />
+    <div className="min-h-screen bg-space-dark text-white">
+      <Navbar />
+      <HeroSection />
+      <ProjectsSection />
+      <ServicesSection />
+      <GlobalSection />
+      <BlogSection />
+      <ContactSection />
       <Footer />
     </div>
   );

@@ -1,1 +1,191 @@
 @import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+
+@layer base {
+  :root {
+    --background: 222.2 47.4% 11.2%;
+    --foreground: 210 40% 98%;
+
+    --card: 217.2 32.6% 17.5%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 47.4% 11.2%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 24.6 95% 53.1%;
+    --primary-foreground: 60 9.1% 97.8%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 24.6 95% 53.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 222.2 47.4% 11.2%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 24.6 95% 53.1%;
+    --sidebar-primary-foreground: 210 40% 98%;
+    --sidebar-accent: 217.2 32.6% 17.5%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217.2 32.6% 17.5%;
+    --sidebar-ring: 212.7 26.8% 83.9%;
+  }
+
+  .light {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 24.6 95% 53.1%;
+    --primary-foreground: 60 9.1% 97.8%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 24.6 95% 53.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-space-dark text-white font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-space font-bold;
+  }
+}
+
+@layer components {
+  .star {
+    @apply absolute bg-white rounded-full animate-star-twinkle;
+  }
+
+  .star-sm {
+    @apply w-0.5 h-0.5;
+  }
+
+  .star-md {
+    @apply w-1 h-1;
+  }
+
+  .star-lg {
+    @apply w-1.5 h-1.5;
+  }
+
+  .section-heading {
+    @apply text-3xl md:text-4xl font-bold text-white mb-4 text-center;
+  }
+
+  .section-subheading {
+    @apply text-xl text-gray-300 mb-8 text-center max-w-2xl mx-auto;
+  }
+
+  .gradient-text {
+    @apply text-transparent bg-clip-text bg-accent-gradient;
+  }
+
+  .btn-primary {
+    @apply bg-accent-gradient text-white font-bold py-3 px-6 rounded-md hover:opacity-90 transition-all;
+  }
+
+  .btn-secondary {
+    @apply bg-space-blue/40 text-white font-bold py-3 px-6 rounded-md border border-blue-700 hover:bg-space-blue/60 transition-all;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:translate-y-[-5px] hover:shadow-lg;
+  }
+}
+
+#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .logo {
+    height: 6em;
+    padding: 1.5em;
+    will-change: filter;
+    transition: filter 300ms;
+  }
+  .logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+  }
+  .logo.react:hover {
+    filter: drop-shadow(0 0 2em #61dafbaa);
+  }
+  
+  @keyframes logo-spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @media (prefers-reduced-motion: no-preference) {
+    a:nth-of-type(2) .logo {
+      animation: logo-spin infinite 20s linear;
+    }
+  }
+  
+  .card {
+    padding: 2em;
+  }
+  
+  .read-the-docs {
+    color: #888;
+  }
+  
