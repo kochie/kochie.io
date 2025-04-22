@@ -3,9 +3,10 @@ import MeKochieIo from "@/assets/images/me-kochie-io.png";
 import KochieSpace from "@/assets/images/kochie-space.png";
 import BlogKochieIo from "@/assets/images/blog-kochie-io.png";
 import ThreeBody from "@/assets/images/3body.png";
+import Halo from "@/assets/images/halo.jpg";
 
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image'
+import Link from "next/link"
 
 import Top from "./top.mdx";
 import Bottom from "./bottom.mdx";
@@ -33,13 +34,13 @@ export default function ProjectGrid() {
     },
     {
       name: "Web Development - The Right Way",
-      image: "/images/halo.jpg",
+      image: Halo,
       link: "https://google.com",
       content: "Some cool content about the fully sick project",
     },
     {
       name: "Contact Tracing",
-      image: "/images/halo.jpg",
+      image: Halo,
       link: "https://ct.vercel.app",
       content: "Technical demo for contract tracing at large scale",
       // grid: ["row-span-2"],
@@ -60,7 +61,7 @@ export default function ProjectGrid() {
     },
     {
       name: "CF-AST",
-      image: "/images/halo.jpg",
+      image: Halo,
       link: "https://github.com/kochie/cfast",
       content: "CloudFormation Abstract Syntax Tree",
     },
@@ -90,7 +91,7 @@ export default function ProjectGrid() {
             />
             <div className="group-hover:opacity-100 opacity-0 transform-gpu duration-200 text-white font-mono flex flex-col m-10 ">
               <h1 className="underline mb-3">
-                <Link href={project.link} legacyBehavior>
+                <Link href={project.link} >
                   {project.name}
                 </Link>
               </h1>
