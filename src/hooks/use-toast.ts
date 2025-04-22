@@ -182,11 +182,17 @@ function useToast() {
     }
   }, [state])
 
-  return {
+  const toastFn = React.useCallback((props: Toast) => toast(props), [])
+  const dismiss = React.useCallback(
+    (toastId?: string) => dispatch({ type: "DISMISS_TOAST", toastId }),
+    []
+  )
+
+  return React.useMemo(() => ({
     ...state,
-    toast,
-    dismiss: (toastId?: string) => dispatch({ type: "DISMISS_TOAST", toastId }),
-  }
+    toast: toastFn,
+    dismiss,
+  }), [state, toastFn, dismiss])
 }
 
 export { useToast, toast }

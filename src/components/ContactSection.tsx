@@ -46,7 +46,8 @@ const ContactSection = () => {
         variant: "destructive",
       });
     }
-  }, [state, toast]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state]);
 
   return (
     <section id="contact" className="py-24 bg-space-darker relative">
