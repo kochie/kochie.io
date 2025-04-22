@@ -9,6 +9,7 @@ import { useActionState, useEffect } from "react";
 import { getCalApi } from "@calcom/embed-react";
 import { sendMessage } from "@/actions/sendMessage";
 import { useToast } from "@/hooks/use-toast";
+import {trackEvent} from "fathom-client"
 
 const initialState = {
   name: "",
@@ -86,6 +87,7 @@ const ContactSection = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
+                onClick={() => trackEvent("Contact Form Submitted")}
                 type="submit"
                 disabled={pending}
                 className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-black cursor-pointer"
@@ -100,6 +102,7 @@ const ContactSection = () => {
               </Button>
 
               <Button
+                onClick={() => trackEvent("Book a Meeting")}
                 variant="outline"
                 type="button"
                 className="w-full sm:w-auto border-accent text-accent hover:bg-accent/10 cursor-pointer"

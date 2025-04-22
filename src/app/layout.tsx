@@ -6,6 +6,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 
 import "./globals.css";
+import Fathom from "@/components/Fathom";
 
 config.autoAddCss = false;
 
@@ -17,12 +18,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-          <TooltipProvider>
-            <Toaster />
-            <Sonner />
-            {/* <ThemeButton /> */}
-            {children}
-          </TooltipProvider>
+        <TooltipProvider>
+          <Fathom />
+          <Toaster />
+          <Sonner />
+          {/* <ThemeButton /> */}
+          {children}
+        </TooltipProvider>
       </body>
     </html>
   );
